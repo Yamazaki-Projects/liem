@@ -62,7 +62,6 @@ export default function InquiriesPage() {
                   >
                     ✉️ 返信する
                   </a>
-                  <span style={{ fontSize: "0.8rem", color: "#71717a" }}>{i.customerEmail}</span>
                 </div>
               </div>
             </div>
@@ -82,7 +81,6 @@ export default function InquiriesPage() {
                 <th>ID</th>
                 <th>受信日</th>
                 <th>お名前</th>
-                <th>メールアドレス</th>
                 <th>種別</th>
                 <th>内容（抜粋）</th>
                 <th>ステータス</th>
@@ -95,7 +93,6 @@ export default function InquiriesPage() {
                   <td style={{ fontFamily: "monospace", fontSize: "0.8rem", color: "#71717a" }}>{i.id}</td>
                   <td style={{ whiteSpace: "nowrap" }}>{i.date}</td>
                   <td style={{ fontWeight: 600 }}>{i.customerName}</td>
-                  <td style={{ fontSize: "0.8rem", color: "#71717a" }}>{i.customerEmail}</td>
                   <td>{i.subject}</td>
                   <td style={{ maxWidth: 200, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", fontSize: "0.8rem", color: "#52525b" }}>
                     {i.message}

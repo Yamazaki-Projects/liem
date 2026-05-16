@@ -43,7 +43,6 @@ export default function OrdersPage() {
                 <th>注文ID</th>
                 <th>申し込み日</th>
                 <th>お客様名</th>
-                <th>メールアドレス</th>
                 <th>商品</th>
                 <th>ネイルの形</th>
                 <th>長さ</th>
@@ -58,7 +57,6 @@ export default function OrdersPage() {
                   <td style={{ fontFamily: "monospace", fontSize: "0.8rem", color: "#71717a" }}>{o.id}</td>
                   <td style={{ whiteSpace: "nowrap" }}>{o.date}</td>
                   <td style={{ fontWeight: 600 }}>{o.customerName}</td>
-                  <td style={{ fontSize: "0.8rem", color: "#71717a" }}>{o.customerEmail}</td>
                   <td>{o.productName}</td>
                   <td>{o.nailShape}</td>
                   <td>{o.nailLength}</td>
@@ -105,10 +103,6 @@ export default function OrdersPage() {
                 </div>
                 <div style={{ gridColumn: "span 2" }}>
                   <span style={{ color: "#71717a" }}>デザイン要望：</span>{o.designWish}
-                </div>
-                <div>
-                  <span style={{ color: "#71717a" }}>メール：</span>
-                  <a href={`mailto:${o.customerEmail}`} style={{ color: "#C8A84B" }}>{o.customerEmail}</a>
                 </div>
               </div>
             </div>
