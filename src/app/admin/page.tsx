@@ -111,7 +111,7 @@ export default function AdminDashboard() {
               const pct = maxProductTotal > 0 ? (p.total / maxProductTotal) * 100 : 0;
               return (
                 <div key={p.name} className="admin-bar-row">
-                  <div className="admin-bar-label" style={{ width: 90, fontSize: "0.7rem" }}>{p.name}</div>
+                  <div className="admin-bar-label" style={{ width: 120, fontSize: "0.68rem" }}>{p.name}</div>
                   <div className="admin-bar-track">
                     <div className="admin-bar-fill" style={{ width: `${pct}%` }} />
                   </div>

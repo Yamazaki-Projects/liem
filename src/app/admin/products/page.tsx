@@ -2,6 +2,10 @@ import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import { mockOrders } from "../_data/mockData";
 
+const DISCONTINUED = [
+  { id: "6", name: "カラー グラデ", price: 16000, category: "ネイルチップ" },
+];
+
 function getOrderCount(productId: string) {
   return mockOrders.filter((o) => o.productId === productId && o.status !== "cancelled").length;
 }
@@ -149,6 +153,17 @@ export default function ProductsPage() {
                   </td>
                   <td>{getOrderCount(p.id)}件</td>
                   <td style={{ fontWeight: 600, color: "#C8A84B" }}>¥{getRevenue(p.id).toLocaleString()}</td>
+                </tr>
+              ))}
+              {DISCONTINUED.map((p) => (
+                <tr key={p.id} style={{ opacity: 0.6 }}>
+                  <td style={{ fontWeight: 600 }}>{p.name}</td>
+                  <td>{p.category}</td>
+                  <td>¥{p.price.toLocaleString()}</td>
+                  <td>—</td>
+                  <td><span className="badge badge-cancelled">廃番</span></td>
+                  <td>{getOrderCount(p.id)}件</td>
+                  <td style={{ fontWeight: 600 }}>¥{getRevenue(p.id).toLocaleString()}</td>
                 </tr>
               ))}
             </tbody>
